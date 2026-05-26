@@ -1,0 +1,316 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ForgeUrFit | Built by You. Worn by You.</title>
+    <meta name="description" content="ForgeUrFit is a GTA-based custom streetwear brand offering affordable custom shirts, hoodies, and sweatpants for teens and young adults." />
+    <link rel="preload" as="image" href="assets/forgeurfit-logo.png" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="site-shell">
+      <header class="header" id="top">
+        <a class="brand-lockup" href="#home" aria-label="ForgeUrFit home">
+          <span class="brand-word">FORGEURFIT</span>
+          <span class="brand-dot"></span>
+        </a>
+        <nav class="desktop-nav" aria-label="Main navigation">
+          <a href="#home" data-route="home">Home</a>
+          <a href="#products" data-route="products">Products</a>
+          <a href="#customize" data-route="customize">Customize</a>
+          <a href="#about" data-route="about">About</a>
+          <a href="#pricing" data-route="pricing">Pricing</a>
+          <a href="#faq" data-route="faq">FAQ</a>
+          <a href="#contact" data-route="contact">Contact</a>
+        </nav>
+        <div class="header-actions">
+          <button class="cart-button" type="button" data-open-cart>
+            Bag <span id="cartCount">0</span>
+          </button>
+          <button class="menu-button" type="button" aria-label="Open menu" data-menu-button>
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </header>
+
+      <div class="mobile-panel" data-mobile-panel>
+        <a href="#home" data-route="home">Home</a>
+        <a href="#products" data-route="products">Products</a>
+        <a href="#customize" data-route="customize">Customize</a>
+        <a href="#about" data-route="about">About</a>
+        <a href="#pricing" data-route="pricing">Pricing</a>
+        <a href="#faq" data-route="faq">FAQ</a>
+        <a href="#contact" data-route="contact">Contact</a>
+      </div>
+
+      <main>
+        <section class="page active" id="home" data-page="home">
+          <div class="hero">
+            <div class="hero-copy reveal">
+              <p class="eyebrow">Custom streetwear from the GTA</p>
+              <h1>Built by you. <span>Worn by you.</span></h1>
+              <p class="hero-text">
+                ForgeUrFit helps students and young adults create affordable, stylish, high-quality clothing that actually feels personal.
+              </p>
+              <div class="hero-buttons">
+                <a class="btn primary" href="#customize">Start designing</a>
+                <a class="btn secondary" href="#products">View products</a>
+              </div>
+              <div class="trust-strip">
+                <div><strong>No minimums</strong><span>Small orders welcome</span></div>
+                <div><strong>Local focus</strong><span>Brampton, Mississauga & GTA</span></div>
+                <div><strong>Custom-first</strong><span>Names, graphics, teams & clubs</span></div>
+              </div>
+            </div>
+            <div class="hero-art reveal delay-1">
+              <img src="assets/forgeurfit-logo.png" alt="ForgeUrFit flame logo" />
+              <div class="tag-grid">
+                <span>Streetwear</span><span>Custom</span><span>School Merch</span><span>Gift Ready</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="section-header compact reveal">
+            <p class="eyebrow">What we make</p>
+            <h2>Personal pieces for everyday fits, clubs, teams, events, and gifts.</h2>
+          </div>
+          <div class="feature-grid">
+            <article class="feature-card reveal">
+              <div class="icon-badge">01</div>
+              <h3>Choose the base</h3>
+              <p>Pick a hoodie, shirt, or sweatpants depending on your style, budget, and use.</p>
+            </article>
+            <article class="feature-card reveal delay-1">
+              <div class="icon-badge">02</div>
+              <h3>Add your design</h3>
+              <p>Use a ForgeUrFit design or send your own name, quote, graphic, logo, or group idea.</p>
+            </article>
+            <article class="feature-card reveal delay-2">
+              <div class="icon-badge">03</div>
+              <h3>Wear something yours</h3>
+              <p>Every order is made to feel unique, personal, and connected to the customer.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="page" id="products" data-page="products">
+          <div class="page-hero reveal">
+            <p class="eyebrow">Products</p>
+            <h1>Shop the main ForgeUrFit lineup.</h1>
+            <p>Filter by product type, compare starting prices, and add items to your bag before sending an order inquiry.</p>
+          </div>
+
+          <div class="filter-bar reveal">
+            <button class="filter active" data-filter="all">All</button>
+            <button class="filter" data-filter="hoodies">Hoodies</button>
+            <button class="filter" data-filter="shirts">Shirts</button>
+            <button class="filter" data-filter="sweatpants">Sweatpants</button>
+            <button class="filter" data-filter="services">Services</button>
+          </div>
+
+          <div class="product-grid" id="productGrid"></div>
+        </section>
+
+        <section class="page" id="customize" data-page="customize">
+          <div class="split-layout">
+            <div class="panel reveal">
+              <p class="eyebrow">Build your order</p>
+              <h1>Create your custom fit.</h1>
+              <p class="muted">Choose your item, size, colour, and design type. The form builds a clear order summary you can send to ForgeUrFit.</p>
+
+              <form class="builder-form" id="builderForm">
+                <label>
+                  Product
+                  <select id="buildProduct" required>
+                    <option value="Custom T-Shirt" data-price="25">Custom T-Shirt — $25</option>
+                    <option value="Custom Hoodie" data-price="45">Custom Hoodie — $45</option>
+                    <option value="Custom Sweatpants" data-price="35">Custom Sweatpants — $35</option>
+                    <option value="ForgeUrFit Design Shirt" data-price="15">ForgeUrFit Design Shirt — $15</option>
+                    <option value="ForgeUrFit Design Hoodie" data-price="25">ForgeUrFit Design Hoodie — $25</option>
+                  </select>
+                </label>
+                <div class="form-row">
+                  <label>
+                    Size
+                    <select id="buildSize">
+                      <option>S</option><option>M</option><option>L</option><option>XL</option><option>Custom sizing note</option>
+                    </select>
+                  </label>
+                  <label>
+                    Quantity
+                    <input id="buildQty" type="number" min="1" value="1" />
+                  </label>
+                </div>
+                <label>
+                  Colour preference
+                  <input id="buildColour" type="text" placeholder="Black, white, grey, orange, etc." />
+                </label>
+                <label>
+                  Design details
+                  <textarea id="buildNotes" rows="4" placeholder="Name, quote, graphic idea, school club, team, event, or placement notes."></textarea>
+                </label>
+                <label class="checkline">
+                  <input type="checkbox" id="rushToggle" /> Add rush order option (+$12 before tax)
+                </label>
+                <div class="form-actions">
+                  <button class="btn primary" type="submit">Add to bag</button>
+                  <button class="btn ghost" type="button" id="resetBuilder">Reset</button>
+                </div>
+              </form>
+            </div>
+            <aside class="summary-card reveal delay-1">
+              <p class="eyebrow">Live estimate</p>
+              <h2 id="estimateTotal">$28.25</h2>
+              <p class="muted">Estimated total after 13% HST.</p>
+              <div class="summary-lines" id="estimateLines"></div>
+              <div class="notice">Final timing and colours are confirmed after the order is reviewed.</div>
+            </aside>
+          </div>
+        </section>
+
+        <section class="page" id="about" data-page="about">
+          <div class="about-grid">
+            <div class="panel reveal">
+              <p class="eyebrow">About ForgeUrFit</p>
+              <h1>We help people create clothing that represents them.</h1>
+              <p>
+                ForgeUrFit is a custom clothing business focused on personalized streetwear-style clothing for teens and young adults. Our main products are hoodies, shirts, and sweatpants.
+              </p>
+              <p>
+                Customers can choose our own brand designs or request custom designs based on their personal ideas. Each item is made to feel personal, whether it is for a school club, sports team, friend group, event, gift, or everyday outfit.
+              </p>
+            </div>
+            <div class="brand-story reveal delay-1">
+              <img src="assets/forgeurfit-logo.png" alt="ForgeUrFit logo" />
+              <div class="story-card">
+                <h2>Name meaning</h2>
+                <p><strong>Forge</strong> means to create or build. <strong>UrFit</strong> means your outfit and personal style. Together, ForgeUrFit means customers can build clothing that feels like their own.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="mission-band reveal">
+            <h2>Mission Statement</h2>
+            <p>Our mission is to help people express themselves through affordable, stylish, and high-quality custom clothing.</p>
+            <p>By focusing on customization, fair prices, and local connections in the GTA, we make fashion more personal and meaningful for teens and young adults.</p>
+          </div>
+
+          <div class="values-grid reveal">
+            <div><h3>Customization</h3><p>Customers control the look and message of their clothing.</p></div>
+            <div><h3>Affordability</h3><p>Prices are made to stay realistic for students and young adults.</p></div>
+            <div><h3>Quality</h3><p>We focus on clean designs, comfortable blanks, and careful finishing.</p></div>
+            <div><h3>Community</h3><p>ForgeUrFit is built around local students, clubs, teams, and events.</p></div>
+          </div>
+        </section>
+
+        <section class="page" id="pricing" data-page="pricing">
+          <div class="page-hero reveal">
+            <p class="eyebrow">Pricing</p>
+            <h1>Clear prices before tax and cost breakdowns.</h1>
+            <p>Our prices are designed to cover blank clothing, printing materials, packaging, and design time while staying affordable.</p>
+          </div>
+
+          <div class="pricing-layout">
+            <div class="price-table-card reveal">
+              <h2>Selling Price Before Tax</h2>
+              <table class="price-table">
+                <thead><tr><th>Product / Service</th><th>Price</th></tr></thead>
+                <tbody>
+                  <tr><td>Hoodie with ForgeUrFit design</td><td>$25.00</td></tr>
+                  <tr><td>Hoodie with custom design</td><td>$45.00</td></tr>
+                  <tr><td>Shirt with ForgeUrFit design</td><td>$15.00</td></tr>
+                  <tr><td>Shirt with custom design</td><td>$25.00</td></tr>
+                  <tr><td>Custom sweatpants</td><td>$35.00</td></tr>
+                  <tr><td>Custom design setup</td><td>$10.00</td></tr>
+                  <tr><td>Rush order add-on</td><td>$12.00</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="price-table-card reveal delay-1 wide-table-card">
+              <h2>Cost to Business & Profit</h2>
+              <div class="table-scroll">
+                <table class="price-table breakdown-table">
+                  <thead>
+                    <tr>
+                      <th>Product</th><th>Blank Clothing Cost</th><th>Material Cost</th><th>Cost to Business</th><th>Selling Price Before Tax</th><th>Profit Per Sale</th><th>After 13% HST</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr><td>Custom T-Shirt</td><td>$3.96</td><td>$1.56</td><td>$5.52</td><td>$25.00</td><td>$19.48</td><td>$28.25</td></tr>
+                    <tr><td>Custom Hoodie</td><td>$16.86</td><td>$1.56</td><td>$18.42</td><td>$45.00</td><td>$26.58</td><td>$50.85</td></tr>
+                    <tr><td>Custom Sweatpants</td><td>$12.94</td><td>$1.56</td><td>$14.50</td><td>$35.00</td><td>$20.50</td><td>$39.55</td></tr>
+                    <tr><td>Custom Design Setup</td><td>N/A</td><td>N/A</td><td>$2.00</td><td>$10.00</td><td>$8.00</td><td>$11.30</td></tr>
+                    <tr><td>Rush Order Add-On</td><td>N/A</td><td>N/A</td><td>$3.00</td><td>$12.00</td><td>$9.00</td><td>$13.56</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="page" id="faq" data-page="faq">
+          <div class="page-hero reveal">
+            <p class="eyebrow">FAQ</p>
+            <h1>Questions customers may ask before ordering.</h1>
+          </div>
+          <div class="faq-list" id="faqList"></div>
+        </section>
+
+        <section class="page" id="contact" data-page="contact">
+          <div class="split-layout">
+            <div class="panel reveal">
+              <p class="eyebrow">Contact / Order inquiry</p>
+              <h1>Send ForgeUrFit your idea.</h1>
+              <p class="muted">This form creates an order message you can copy or send by email. Replace the email in the code when you have the final ForgeUrFit email address.</p>
+              <form class="builder-form" id="contactForm">
+                <label>Name<input id="contactName" required placeholder="Your name" /></label>
+                <label>Email or Instagram<input id="contactInfo" required placeholder="Email or @username" /></label>
+                <label>What do you want?<textarea id="contactMessage" required rows="5" placeholder="Tell us the product, size, colour, quantity, deadline, and design idea."></textarea></label>
+                <button class="btn primary" type="submit">Generate message</button>
+              </form>
+            </div>
+            <aside class="summary-card reveal delay-1">
+              <p class="eyebrow">Order message</p>
+              <pre id="generatedMessage">Your order message will appear here.</pre>
+              <div class="form-actions stacked">
+                <button class="btn secondary" id="copyMessage" type="button">Copy message</button>
+                <a class="btn ghost" id="emailMessage" href="mailto:orders@forgeurfit.com">Open email</a>
+              </div>
+            </aside>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <div>
+          <strong>ForgeUrFit</strong>
+          <p>Built by you. Worn by you.</p>
+        </div>
+        <div class="footer-links">
+          <a href="#products">Products</a>
+          <a href="#customize">Customize</a>
+          <a href="#pricing">Pricing</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </footer>
+    </div>
+
+    <aside class="cart-drawer" data-cart-drawer>
+      <div class="cart-head">
+        <h2>Your Bag</h2>
+        <button type="button" data-close-cart aria-label="Close bag">×</button>
+      </div>
+      <div id="cartItems" class="cart-items"></div>
+      <div class="cart-total">
+        <div><span>Subtotal</span><strong id="cartSubtotal">$0.00</strong></div>
+        <div><span>13% HST</span><strong id="cartTax">$0.00</strong></div>
+        <div class="grand"><span>Total</span><strong id="cartTotal">$0.00</strong></div>
+      </div>
+      <a class="btn primary full" href="#contact" data-close-cart>Send inquiry</a>
+    </aside>
+    <div class="overlay" data-overlay></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
